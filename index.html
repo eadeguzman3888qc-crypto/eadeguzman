@@ -4,68 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enrique Emmanuel De Guzman | Portfolio</title>
-    <style>
-:root {
-            --bg-dark: #1a1a1a;
-            --bg-darker: #121212;
-            --bg-light: #f8f9fa;
-            --bg-lighter: #ffffff;
-            --accent-yellow: #ffcc00;
-            --accent-yellow-hover: #ffdb4d;
-            --text-white: #ffffff;
-            --text-dark: #212529;
-            --text-gray: #cccccc;
-            --text-gray-light: #6c757d;
-            --card-bg: #252525;
-            --card-bg-light: #ffffff;
-            --border-subtle: #444;
-            --border-light: #dee2e6;
-        }
-
-        [data-theme="light"] {
-            --bg-dark: #f8f9fa;
-            --bg-darker: #ffffff;
-            --bg-light: #1a1a1a;
-            --bg-lighter: #121212;
-            --text-white: #212529;
-            --text-dark: #ffffff;
-            --text-gray: #6c757d;
-            --text-gray-light: #cccccc;
-            --card-bg: #ffffff;
-            --card-bg-light: #252525;
-            --border-subtle: #dee2e6;
-            --border-light: #444;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-white);
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-
-        /* ============================================
-         NAVIGATION BAR
-         I've removed the "about me" nav option
-         since it is already the title of my site
-         ============================================ */
-        nav {
-            background-color: #000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 5%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-        }
+<link rel="stylesheet" href="css/style.css">
 
         .logo {
             font-weight: bold;
@@ -1026,30 +965,7 @@
 
     <!-- I Added Scroll to Top Button -->
     <button class="scroll-top-btn" id="scrollTopBtn" title="Go to top">↑</button>
-    <script>
-        // Smooth scroll function
-        function smoothScroll(target, duration = 800) {
-            const start = window.pageYOffset;
-            const distance = target.offsetTop - start;
-            let startTime = null;
-            
-            function animation(currentTime) {
-                if (startTime === null) startTime = currentTime;
-                const timeElapsed = currentTime - startTime;
-                const run = ease(timeElapsed, start, distance, duration);
-                window.scrollTo(0, run);
-                if (timeElapsed < duration) requestAnimationFrame(animation);
-            }
-            
-            function ease(t, b, c, d) {
-                t /= d / 2;
-                if (t < 1) return c / 2 * t * t + b;
-                t--;
-                return -c / 2 * (t * (t - 2) - 1) + b;
-            }
-            
-            requestAnimationFrame(animation);
-        }
+    <script src="js/script.js" defer></script>
 
         // DOM elements
         const hamburger = document.querySelector('.hamburger');
